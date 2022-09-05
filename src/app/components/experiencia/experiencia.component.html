@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <h1>Experiencia laboral</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged" id="agregar">
+            Nueva experiencia
+        </button>
+
+    </div>
+    <div class="col lg 1"></div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th></th>
+                    <th>Empresa</th>
+                    <th id="columnadescripcion" >Descripción del puesto</th>
+                    <th>Desde</th>
+                    <th>Hasta</th>
+                   
+                </tr>
+                <tr *ngFor="let Experiencia of expe">
+                    <td><img src="{{Experiencia.imagenE}}" id="fotoexperiencia"></td>
+                    <td><p>{{Experiencia.nombreE}}</p></td>
+                    <td ><p>{{Experiencia.descripcionE}}</p></td>
+                    <td><p>{{Experiencia.fechadesdeE}}</p></td>
+                    <td><p>{{Experiencia.fechahastaE}}</p></td>
+                    <td *ngIf="isLogged">
+                        <button routerLink="/editexp/{{Experiencia.id}}"><i class="bi bi-pencil"></i></button>
+                    </td>
+                        
+                    <td *ngIf="isLogged">
+                        <button (click)="delete(Experiencia.id)">  <i class="bi bi-trash3"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

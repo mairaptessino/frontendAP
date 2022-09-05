@@ -1,0 +1,65 @@
+.container-fluid{
+    padding: 20px;
+}
+
+div{
+    background-color: snow;
+}
+
+
+.espacio{
+    height:60px;
+}
+
+td {
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-left: 0px;
+}
+#nombre{
+    font-weight: bold;
+    margin-top: 30%;
+}
+
+#agregar{
+    font-size: 10px;
+}
+
+.bi{
+    size: 10px;
+}
+
+
+#fotoperfil{
+        position: absolute;
+        width: 13%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 3%;
+        top: 340px;
+    }
+
+
+
+/* @media(min-width: 576px){
+    #fotoperfil{
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 3%;
+        top: 340px;
+    }
+
+@media(max-width: 575px){
+    #fotoperfil{
+        position: absolute;
+        width: 30%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 33%;
+        top: 50px;
+        }
+}
+} */

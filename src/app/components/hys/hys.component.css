@@ -1,0 +1,33 @@
+.container-fluid{
+    background-color: snow;
+    padding: 20px;
+}
+
+.contenedor{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+
+}
+
+
+
+h1{
+  font-family: garamond;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+#agregar{
+  font-size: 10px;
+}
+.bi{
+  size: 10px;
+}
+
+h2{
+  font-family: garamond;
+  font-size: 20 px;
+}

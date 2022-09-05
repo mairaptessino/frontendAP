@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <h1>Educación</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged" id=agregar>
+            Agregar Educación
+        </button>
+    </div>
+
+    <div class="col lg 1"></div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th> </th>
+
+                    <th>Título</th>
+                    <th>Descripción</th>
+                    <th>Desde</th>
+                    <th>Hasta</th>
+                </tr>
+
+                <tr *ngFor="let Educacion of educacion">
+                    <td><img src="{{Educacion.imagenE}}" id="fotoeducacion"></td>
+
+                    <td>
+                        <p>{{Educacion.nombreE}}</p>
+                    </td>
+                    <td>
+                        <p>{{Educacion.descripcionE}}</p>
+                    </td>
+                    <td>
+                        <p>{{Educacion.fechadesdeE}}</p>
+                    </td>
+                    <td>
+                        <p>{{Educacion.fechahastaE}}</p>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button routerLink="/editedu/{{Educacion.id}}"><i class="bi bi-pencil"></i></button>
+                    </td>
+
+                    <td *ngIf="isLogged">
+                        <button (click)="delete(Educacion.id)"> <i class="bi bi-trash3"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

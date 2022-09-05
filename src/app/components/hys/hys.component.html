@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <h1>Hard & Soft Skills</h1>
+  <div class="col-lg-2">
+      <button type="button" class="btn btn-dark" routerLink="/nuevaskill" *ngIf="isLogged" id="agregar">
+          Agregar SKill
+      </button>
+  </div>
+
+<section class="contenedor">
+  <div *ngFor="let Skills of skills" >
+    <div class="circle">
+      <circle-progress
+      [percent]="Skills.porcentajeE"
+      [radius]="75"
+      [outerStrokeWidth]="12"
+      [innerStrokeWidth]="2"
+      [outerStrokeColor]="'#78C000'"
+      [innerStrokeColor]="'#C7E596'"
+      [animation]="true"
+      [animationDuration]="1000"
+      [title]="Skills.nombreE"
+      [imageSrc]="Skills.imagenE"
+      [showImage]="true"
+      [imageHeight]="50"
+      [imageWidth]="50"
+      [showSubtitle]="false"
+      [titleFontSize]="'25px'"
+    ></circle-progress>
+    </div>
+    <div>
+      <p *ngIf="isLogged">
+        <button routerLink="/editskill/{{Skills.id}}"><i class="bi bi-pencil"></i></button>
+      </p>
+      
+      <p *ngIf="isLogged">
+        <button (click)="delete(Skills.id)">  <i class="bi bi-trash3"></i></button>
+      </p>
+    </div>
+    
+  </div>
+</section>

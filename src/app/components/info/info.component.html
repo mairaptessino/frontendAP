@@ -1,0 +1,32 @@
+<div class="container-fluid" *ngFor="let Info of info">
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td><img src="{{Info.imagen}}" class="img-fluid" id="fotoperfil"></td>
+                   
+                    <td *ngIf="isLogged">
+                        <button routerLink="/editinfo/{{Info.id}}"><i
+                                class="bi bi-pencil"></i></button>
+                    </td>
+                
+            </tr>
+
+                
+                <tr class="espacio"></tr>
+                <tr>
+                    <td nowrap id="nombre">{{Info.nombre}} {{Info.apellido}}</td>
+                </tr>
+
+                <tr>
+                    <td nowrap id="titulo"> {{Info.titulo}} </td>
+                </tr>
+                <tr>
+
+                    <td nowrap id="datos"> {{Info.datos}} </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>

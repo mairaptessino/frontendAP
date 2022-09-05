@@ -1,0 +1,38 @@
+.container-fluid{
+    padding: 20px;
+}
+
+div{
+    background-color: snow;
+}
+
+h1, h3{
+    display: inline;
+}
+
+h1{
+    font-family: garamond;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#agregar{
+    font-size: 10px;
+}
+.bi{
+    size: 10px;
+}
+
+#fotoexperiencia{
+    width: 70px;
+    height: 70px;
+}
+
+table{
+    table-layout: fixed;
+    width: 100%;
+}
+/* 
+#columnadescripcion{
+    width:50%
+} */

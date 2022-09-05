@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div *ngFor="let Acerca of acerca">
+        <table class="table">
+            <tbody>
+
+                <td nowrap>
+                    <h1>Acerca de mí</h1>
+                </td>
+
+                <td *ngIf="isLogged">
+                    <button routerLink="/editacerca/{{Acerca.id}}"><i class="bi bi-pencil"></i></button>
+                </td>
+                <tr>
+                    <div>
+                        <p>{{Acerca.info}}</p>
+                    </div>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>

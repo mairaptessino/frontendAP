@@ -1,0 +1,33 @@
+.container-fluid{
+    padding: 20px;
+      }
+
+div{
+    background-color: snow;
+}
+
+h1{
+    font-family: garamond;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+
+.bi{
+    size: 10px;
+}
+
+h1, button{
+    display: inline-block;
+}
+
+td{
+    display: inline-block;
+}
+
+h2{
+    font-family: garamond;
+    font-size: 20 px;
+  
+}
+
